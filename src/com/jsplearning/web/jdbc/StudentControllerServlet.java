@@ -40,7 +40,12 @@ public class StudentControllerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// list the students ... in mvc fashion
-		listStudents(request, response);			
+		try {
+			listStudents(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}			
 		
 	}
 
